@@ -1,0 +1,24 @@
+!    -*- f90 -*-
+! Note: the context of this file is case sensitive.
+
+python module mesh ! in 
+    interface  ! in :mesh
+        subroutine mesh(nod,glxy,nx,ny,nex1,ney1,nem,nnm,dx,dy,x0,y0) ! in :mesh:mesh.f90
+            integer dimension(nem,3),intent(out),depend(nem) :: nod
+            real dimension(nnm,2),intent(out),depend(nnm) :: glxy
+            integer intent(in) :: nx
+            integer intent(in) :: ny
+            integer intent(in) :: nex1
+            integer intent(in) :: ney1
+            integer intent(in) :: nem
+            integer intent(in) :: nnm
+            real dimension(nex1),intent(in),depend(nex1) :: dx
+            real dimension(ney1),intent(in),depend(ney1) :: dy
+            real intent(in) :: x0
+            real intent(in) :: y0
+        end subroutine mesh
+    end interface 
+end python module mesh
+
+! This file was auto-generated with f2py (version:2).
+! See http://cens.ioc.ee/projects/f2py2e/

@@ -1,0 +1,17 @@
+!    -*- f90 -*-
+! Note: the context of this file is case sensitive.
+
+python module nsymgauss ! in 
+    interface  ! in :nsymgauss
+        subroutine nsymgauss(y,a,f,neq,ib) ! in :nsymgauss:nsymgauss.f90
+            real dimension(neq),intent(out),depend(neq) :: y
+            real dimension(neq,ib),intent(in),depend(neq,ib) :: a
+            real dimension(neq),intent(in),depend(neq) :: f
+            integer intent(in) :: neq
+            integer intent(in) :: ib
+        end subroutine nsymgauss
+    end interface 
+end python module nsymgauss
+
+! This file was auto-generated with f2py (version:2).
+! See http://cens.ioc.ee/projects/f2py2e/

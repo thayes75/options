@@ -1,0 +1,19 @@
+!    -*- f90 -*-
+! Note: the context of this file is case sensitive.
+
+python module sfntri ! in 
+    interface  ! in :sfntri
+        subroutine sfntri(det,sf,gdsf,l1,l2,l3,elxy) ! in :sfntri:sfntri.f90
+            real intent(out) :: det
+            real dimension(3),intent(out) :: sf
+            real dimension(2,3),intent(out) :: gdsf
+            real intent(in) :: l1
+            real intent(in) :: l2
+            real intent(in) :: l3
+            real dimension(3,2),intent(in) :: elxy
+        end subroutine sfntri
+    end interface 
+end python module sfntri
+
+! This file was auto-generated with f2py (version:2).
+! See http://cens.ioc.ee/projects/f2py2e/

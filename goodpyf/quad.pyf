@@ -1,0 +1,16 @@
+!    -*- f90 -*-
+! Note: the context of this file is case sensitive.
+
+python module quad ! in 
+    interface  ! in :quad
+        subroutine quad(l1,l2,l3,lwt) ! in :quad:quad.f90
+            real dimension(3),intent(out) :: l1
+            real dimension(3),intent(out) :: l2
+            real dimension(3),intent(out) :: l3
+            real dimension(3),intent(out) :: lwt
+        end subroutine quad
+    end interface 
+end python module quad
+
+! This file was auto-generated with f2py (version:2).
+! See http://cens.ioc.ee/projects/f2py2e/
